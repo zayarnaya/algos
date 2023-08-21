@@ -1,4 +1,5 @@
 const func = (arr) => {
+    if (arr.length === 0) return arr;
     const sorted = [arr[0]];
     let index = 1;
     while (index < arr.length) {
@@ -13,10 +14,9 @@ const func = (arr) => {
                 break;
             }
         }
-
         index++;
     }
     return sorted;
 }
 
-console.log(func([4, 2, 7, 3, 9, 3]))
+console.log(func([]))
