@@ -35,19 +35,19 @@ function Queue() {
 const bfs = (root, callback) => {
     let queue = new Queue();
     queue.push(root);
-    let visited = [];
+    const visited = {}
 
     while (queue.size) {
         let node = queue.shift();
-        if (!visited.includes(node.value)) {
+        if (!visited[node.value] || !visited[node.value].includes(node.value)) {}
             callback(node.value);
             if (node?.children) {
                 for (let child of node.children) {
                     queue.push(child);
                 }
             };
-            visited.push(node.value);
-        }
+            if (!visited[node.value]) visited[node.value] = [];
+            visited[node.value].push(node.value);
     }
 
 }
