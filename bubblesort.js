@@ -9,5 +9,4 @@ const func = (arr) => {
             }
         }
     } while (count > 0);
-    console.log(arr);
 }
