@@ -15,3 +15,5 @@ let simple = (n) => {
 
 console.log(simple(100));
 console.log(simple(97));
+console.log(simple(0));
+console.log(simple(1));
