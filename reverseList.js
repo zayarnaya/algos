@@ -1,6 +1,7 @@
 const reverseList = (list) => {
     let res = {};
     let node = list;
+    if (!Object.keys(list).length) return {};
 
     while (node) {
         if (Object.keys(res).length === 0 ) {
@@ -30,4 +31,13 @@ console.log(reverseList({
             next: null
         }
     }
+}))
+
+console.log(reverseList({
+
+}))
+
+console.log(reverseList({
+    value: 1,
+    next: null
 }))
