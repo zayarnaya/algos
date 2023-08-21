@@ -10,5 +10,5 @@ const func = (arr) => {
         }
         [arr[i], arr[index]] = [arr[index], arr[i]];
     }
-    console.log(arr);
+    return arr;
 }
